@@ -7,7 +7,12 @@
 <div class="container">
   <div class="row">
     <div class="col-md-6">
-      <ul class="list-group"></ul>
+      <ul class="list-group mt-5">
+        <li
+        *ngFor="let empleado of empleadoArray"
+        class="list-group-item"
+        > <span class="badge text-bg-primary"> {{ empleado.id }} </span> {{ empleado.name }} - {{ empleado.country }}</li>
+      </ul>
     </div>
     <div class="col-md-6">
       <div class="card mt-5">
