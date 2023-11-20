@@ -20,6 +20,15 @@
           <div class="card-title">
             Inserta un nuevo empleado
           </div>
+          <div class="form-group">
+            <input type="text" [(ngModel)]="selectEmpleado.name" placeholder="Ingrese el nombre" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="text" [(ngModel)]="selectEmpleado.country" placeholder="Ingrese el pais" class="form-control">
+          </div>
+          <button (click)="addOrEdit()" class="btn btn-success">
+            Submit
+          </button>
         </div>
       </div>
     </div>

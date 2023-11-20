@@ -12,7 +12,15 @@ export class AppComponent {
     {id: 1, name: 'Morty', country: 'USA'},
     {id: 2, name: 'Rick', country: 'Colombia'},
     {id: 3, name: 'Summer', country: 'Madagascar'}
-
-
   ]
+
+  selectEmpleado: empleado = new empleado();
+
+  addOrEdit(){
+    this.selectEmpleado.id = this.empleadoArray.length + 1;
+    this.empleadoArray.push(this.selectEmpleado);
+
+    this.selectEmpleado = new empleado();
+  }
+
 }
