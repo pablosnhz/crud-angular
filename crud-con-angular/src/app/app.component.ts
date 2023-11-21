@@ -26,9 +26,12 @@ export class AppComponent {
       this.empleadoArray.push(this.selectEmpleado);
     }
 
-
-
     this.selectEmpleado = new empleado();
   }
-
+    delete(){
+      if(confirm('Estas seguro de querer eliminarlo?')){
+      this.empleadoArray = this.empleadoArray.filter(x => x != this.selectEmpleado);
+      this.selectEmpleado = new empleado();
+    }
+  }
 }
