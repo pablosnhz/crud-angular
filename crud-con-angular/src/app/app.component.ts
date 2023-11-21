@@ -11,7 +11,7 @@ export class AppComponent {
   empleadoArray: empleado[] = [
     {id: 1, name: 'Morty', country: 'USA'},
     {id: 2, name: 'Rick', country: 'Colombia'},
-    {id: 3, name: 'Summer', country: 'Madagascar'}
+    {id: 3, name: 'Summer', country: 'Canada'}
   ]
 
   selectEmpleado: empleado = new empleado();
