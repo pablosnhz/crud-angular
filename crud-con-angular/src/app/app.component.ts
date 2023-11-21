@@ -16,9 +16,17 @@ export class AppComponent {
 
   selectEmpleado: empleado = new empleado();
 
+  openForEdit(empleado: empleado){
+    this.selectEmpleado = empleado;
+  }
+
   addOrEdit(){
-    this.selectEmpleado.id = this.empleadoArray.length + 1;
-    this.empleadoArray.push(this.selectEmpleado);
+    if(this.selectEmpleado.id === 0){
+      this.selectEmpleado.id = this.empleadoArray.length + 1;
+      this.empleadoArray.push(this.selectEmpleado);
+    }
+
+
 
     this.selectEmpleado = new empleado();
   }

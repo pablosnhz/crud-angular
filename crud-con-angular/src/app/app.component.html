@@ -11,6 +11,8 @@
         <li
         *ngFor="let empleado of empleadoArray"
         class="list-group-item"
+        (click)="openForEdit(empleado)"
+        [class.active]="empleado === selectEmpleado"
         > <span class="badge text-bg-primary"> {{ empleado.id }} </span> {{ empleado.name }} - {{ empleado.country }}</li>
       </ul>
     </div>
